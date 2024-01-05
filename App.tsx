@@ -6,6 +6,7 @@ import { MainPageAsync } from "./src/Pages/Main/MainPage.async"
 import { Suspense, useContext, useState } from "react"
 import { ThemeContext, Themes } from './src/Theme/themeContext'
 import { useTheme } from './src/Theme/useTheme'
+import { classNames } from './src/helpers/classNames'
 
 
 export const App = () => {
@@ -13,7 +14,7 @@ export const App = () => {
 	const { theme, toogleTheme } = useTheme()
 
 	return (
-		<div className={`app ${theme}`}>
+		<div className={classNames('app', {}, [theme])}>
 			<button onClick={toogleTheme}>Сменить тему</button>
 			<Link to={'/'}>Главная</Link>
 			<Link to={'about'}>Обо всем</Link>
