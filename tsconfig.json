@@ -8,10 +8,16 @@
 		"jsx": "react-jsx",
 		"allowJs": true,
 		"moduleResolution": "node",
+		"baseUrl": ".",
+		"paths": {
+			"*": [
+				"./src/*"
+			]
+		},
+		"esModuleInterop": true,
 		// esModuleInterop позволяет работать с модулями common js 
 		// как собычными модуля через import (require export module) = common.js
 		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true,
 	},
 	"ts-node": {
 		"compilerOptions": {
