@@ -12,5 +12,16 @@
 
 	// размеры 
 
-	--navbar-height: 50px
+	--navbar-height: 50px;
+
+	--sidebar-width: 200px;
+	--sidebar-width-collapsed: 80px;
+}
+
+.content-wrapper {
+	display: flex;
+}
+
+.page-wrapper {
+	flex-grow: 1;
 }

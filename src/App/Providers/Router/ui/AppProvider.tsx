@@ -8,10 +8,13 @@ export const AppProvider = () => {
 	return (
 		<Suspense fallback={<div>Loading</div>}>
 			<Routes>
-				{Object.values(RouterConfig).map(({ path, element }) => {
-					return <Route key={path} path={path} element={element} />
-				})}
-				{console.log(<MainPage />, <AboutPage />)}
+				{Object.values(RouterConfig).map(({ path, element }) => (
+					<Route key={path}
+						path={path}
+						element={(
+							<div className="page-wrapper">{element}</div>
+						)} />
+				))}
 			</Routes>
 		</Suspense>
 	)
