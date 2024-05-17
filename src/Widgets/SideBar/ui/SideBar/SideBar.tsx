@@ -18,6 +18,7 @@ export const SideBar: FC<SideBarProps> = ({ className }) => {
 		<div className={classNames(cls.sideBar, { [cls.collapsed]: collapsed }, [className])}>
 			<Button onClick={onToggle}>Toogle</Button>
 			<div className={cls.switchers}>
+				Popka
 				<ThemeSwitcher />
 			</div>
 		</div>
