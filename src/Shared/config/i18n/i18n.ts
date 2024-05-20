@@ -18,10 +18,14 @@ i18n
 	// for all options read: https://www.i18next.com/overview/configuration-options
 	.init({
 		fallbackLng: 'ru',
-		debug: true,
+		debug: __IS_DEV__ ? true : false,
 
 		interpolation: {
 			escapeValue: false, // not needed for react as it escapes by default
+		},
+		backend: {
+			// for all available options read the backend's repository readme file
+			loadPath: '/locales/{{lng}}/{{ns}}.json'
 		}
 	});
 
